@@ -9,6 +9,9 @@ defmodule Typing do
   end
 
   def atoms do
+    puts "-------------------"
+    puts "------ ATOMS ------"
+    puts "-------------------"
     puts "los atoms son constantes que su valor es su nombre. Comienzan con : y el valor"
     at = :name
     puts at
@@ -20,6 +23,9 @@ defmodule Typing do
   end
 
   def tuple do
+    puts "--------------------"
+    puts "------ TUPLES ------"
+    puts "--------------------"
     puts "declare a tuple as {\"data\", 8, true}"
     my_tuple = {"name", 13, false}
     print_tuple my_tuple
@@ -32,6 +38,9 @@ defmodule Typing do
   end
 
   def map do
+    puts "------------------"
+    puts "------ MAPS ------"
+    puts "------------------"
     puts "Se puede declarar un map con la siguiente sintaxis"
     puts "%{:name => \"elixir\", \"age\" => 20, \"alive\" => true}"
     my_map = %{:name => "elixir", "age" => 20, "alive" => true}
@@ -57,6 +66,9 @@ defmodule Typing do
   end
 
   def list do
+    puts "-------------------"
+    puts "------ LISTS ------"
+    puts "-------------------"
     puts "Para declarar una lista se usa [element, element]"
     my_list = ["item1", "item2"]
     print_list my_list
@@ -77,6 +89,13 @@ defmodule Typing do
     puts "Se agrega item al principio: #{print_list my_list}"
     my_list = Enum.reverse(my_list)
     puts "Se hace reverse nuevamente: #{print_list my_list}"
+  end
+
+  def binaries_or_bitstrings do
+    puts "------------------------------------"
+    puts "------ BINARIES OR BITSTRINGS ------"
+    puts "------------------------------------"
+    puts "Son la representación de un "
   end
 
   @spec print_tuple(tuple()) :: :ok
