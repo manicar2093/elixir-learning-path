@@ -95,7 +95,37 @@ defmodule Typing do
     puts "------------------------------------"
     puts "------ BINARIES OR BITSTRINGS ------"
     puts "------------------------------------"
-    puts "Son la representación de un "
+    puts "Son la representación de bits. Se declaran como una lista, pero encerrada en <<>>.
+    Por ejemplo: <<1,2,3>>"
+    my_bitstring = <<1,2,3>>
+    puts my_bitstring
+    puts "Si se declara un numero mas grande a 255 el numero se declarará con el siguiente byte valido"
+    puts "<<256>> == <<1>>"
+    my_bitstring = <<256>>
+    puts my_bitstring
+    puts "Se puede declarar el tamaño que el bit usará <<15::16>>"
+    my_bitstring = <<15::16>>
+    puts my_bitstring
+  end
+
+  def strings do
+    puts "------------------------------------"
+    puts "-------------- STRINGS -------------"
+    puts "------------------------------------"
+    puts "Elixir no maneja los string como un objeto aparte, sino que son manejados como binarios o como listas"
+    puts "Los mas usada es la forma binaria que se declara con las comillas dobles"
+    my_string = "Un string binario"
+    puts my_string
+    puts ~S(Se pueden ejecutar statements de elixir usando #{}. Todo lo que este dentro de #{} se ejecutará y el resultado se imprimirá)
+    puts "2 + 2 = #{2 + 2}"
+    puts "Se pueden usar los caracteres de escape como \/n \/t, etc"
+    puts "Estos strings pueden ser multiline usando \""
+    puts "Como
+    este string
+    que
+    tiene multiples
+    lineas y no hay problema"
+
   end
 
   @spec print_tuple(tuple()) :: :ok
